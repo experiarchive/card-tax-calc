@@ -717,6 +717,7 @@ select.form-control {
   
   .ad-container {
     margin: 12px 0;
+    overflow-x: auto; /* 작은 화면에서 스크롤 허용 */
   }
   
   .ad-container.header-ad {
@@ -729,6 +730,11 @@ select.form-control {
   
   .ad-container.result-bottom-ad {
     margin-top: 16px;
+  }
+  
+  /* 모바일 광고 최적화 */
+  .mobile-only ins {
+    display: inline-block !important;
   }
 }
 
@@ -744,50 +750,15 @@ select.form-control {
   }
 }
 
-/* 광고 로딩 시 레이아웃 시프트 방지 - 실제 애드센스 크기 적용 */
+/* 광고 로딩 시 레이아웃 시프트 방지 - 애드센스 자체 크기 사용 */
 .ad-container ins {
   display: block;
   margin: 0 auto;
 }
 
-/* 헤더 상단 - PC 리더보드 728x90 */
-.ad-container.header-ad .desktop-only ins {
-  height: 90px;
-  width: 728px;
-  max-width: 100%;
-}
-
-/* 헤더 상단 - 모바일 배너 320x100 */
-.ad-container.header-ad .mobile-only ins {
-  height: 100px;
-  width: 320px;
-  max-width: 100%;
-}
-
-/* 계산 버튼 하단 - PC/모바일 중형 직사각형 300x250 */
-.ad-container.calc-button-ad ins {
-  height: 250px;
-  width: 300px;
-  max-width: 100%;
-}
-
-/* 결과 하단 - PC 리더보드 728x90 */
-.ad-container.result-bottom-ad .desktop-only ins {
-  height: 90px;
-  width: 728px;
-  max-width: 100%;
-}
-
-/* 결과 하단 - 모바일 배너 320x100 */
-.ad-container.result-bottom-ad .mobile-only ins {
-  height: 100px;
-  width: 320px;
-  max-width: 100%;
-}
-
-/* PC 사이드바 - 스카이스크래퍼 160x600 */
+/* PC 사이드바 - 스카이스크래퍼만 크기 지정 (고정 위치용) */
 .sidebar-ad ins {
-  height: 600px;
+  min-height: 600px;
   width: 160px;
 }
 
