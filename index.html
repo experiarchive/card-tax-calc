@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>신용카드 소득공제 계산기 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Google AdSense 메인 코드 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8355312170222120"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- PC용 사이드바 스카이스크래퍼 광고 -->
+  <aside class="sidebar-ad desktop-only">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8355312170222120"
+         data-ad-slot="7301715373"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </aside>
+
+  <main class="container flex flex-col items-center py-16">
+    <!-- 헤더 상단 리더보드 광고 (PC) / 모바일 배너 광고 -->
+    <div class="ad-container header-ad">
+      <!-- PC용 리더보드 728x90 -->
+      <div class="desktop-only">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8355312170222120"
+             data-ad-slot="3942405938"
+             data-ad-format="leaderboard"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      
+      <!-- 모바일용 배너 320x100 -->
+      <div class="mobile-only">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8355312170222120"
+             data-ad-slot="2629324263"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center mb-16 max-w-560 w-full">
+      <h1 class="mb-8">신용카드 소득공제 계산기 2025</h1>
+      <p class="text-base text-gray-600">연말정산을 위한 카드·현금영수증 공제액을 미리 확인해보세요.</p>
+    </header>
+
+    <!-- Form -->
+    <form id="calcForm" class="w-full max-w-560" autocomplete="off" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="totalSalary">총급여액 (원)</label>
+        <input id="totalSalary" type="text" class="form-control currency-input" aria-label="총급여액" required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="creditGen">신용카드 일반 사용액</label>
+        <input id="creditGen" type="text" class="form-control currency-input" aria-label="신용카드 사용액" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="checkGen">체크·현금영수증 일반 사용액</label>
+        <input id="checkGen" type="text" class="form-control currency-input" aria-label="체크 및 현금영수증 사용액" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cashGen">현금영수증 일반 사용액 (선택)</label>
+        <input id="cashGen" type="text" class="form-control currency-input" aria-label="현금영수증 사용액 추가 입력" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="marketSpend">전통시장 사용액</label>
+        <input id="marketSpend" type="text" class="form-control currency-input" aria-label="전통시장 사용액" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="transportSpend">대중교통 사용액</label>
+        <input id="transportSpend" type="text" class="form-control currency-input" aria-label="대중교통 사용액" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cultureSpend">문화비 사용액</label>
+        <input id="cultureSpend" type="text" class="form-control currency-input" aria-label="문화비 사용액" />
+      </div>
+
+      <button id="calcBtn" type="button" class="btn btn--primary btn--full-width mt-8">계산하기</button>
+    </form>
+
+    <!-- 계산 버튼 하단 광고 -->
+    <div class="ad-container calc-button-ad">
+      <!-- PC용 중형 직사각형 300x250 -->
+      <div class="desktop-only">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8355312170222120"
+             data-ad-slot="6482338168"
+             data-ad-format="rectangle"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      
+      <!-- 모바일용 중형 직사각형 300x250 -->
+      <div class="mobile-only">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8355312170222120"
+             data-ad-slot="3848435962"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <section id="result" class="card w-full max-w-560 mt-16 hidden" aria-live="polite">
+      <div class="card__body">
+        <div class="flex flex-col gap-8 mb-16">
+          <div class="flex justify-between"><span>기본 공제액</span><strong id="basicDed">0원</strong></div>
+          <div class="flex justify-between"><span>추가 공제액</span><strong id="extraDed">0원</strong></div>
+          <div class="flex justify-between"><span>총 공제액</span><strong id="totalDed" class="text-lg">0원</strong></div>
+        </div>
+        <table class="w-full text-sm" id="breakdownTable">
+          <thead>
+            <tr class="text-left border-b">
+              <th class="py-8">항목</th>
+              <th class="py-8">사용액</th>
+              <th class="py-8">공제 대상액</th>
+              <th class="py-8">공제액</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 결과 하단 배너 광고 -->
+    <div id="result-bottom-ad" class="ad-container result-bottom-ad hidden">
+      <!-- PC용 리더보드 728x90 -->
+      <div class="desktop-only">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8355312170222120"
+             data-ad-slot="1222272629"
+             data-ad-format="leaderboard"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      
+      <!-- 모바일용 배너 320x100 -->
+      <div class="mobile-only">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8355312170222120"
+             data-ad-slot="8583007456"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+  </main>
+  
+  <script src="app.js" defer></script>
+</body>
+</html>
